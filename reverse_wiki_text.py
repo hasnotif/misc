@@ -21,7 +21,7 @@ def main():
     parser.add_argument("-i", "--input", required=True, help="specify input Wiki text file")
     args = parser.parse_args()
 
-    print("Start")
+    print("Reversing wiki text...", end=" ")
 
     with open(args.input, "r") as r:
         lines = r.readlines()
@@ -53,12 +53,10 @@ def main():
     new_segments.insert(0, pre_segment)
     flattened_new_segments = flatten_list(new_segments)
 
-    print(flattened_new_segments[0:4])
-
     with open("reversed_wiki_text.txt", "w") as w:
         w.writelines(flattened_new_segments)
 
-    print("End")
+    print("Done!")
 
 def flatten_list(l):
     flat_list = []
