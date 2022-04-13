@@ -50,6 +50,7 @@ def main():
                 new_seg = [segments[i]]
         else:
             new_seg.append(segments[i])
+    new_segments.insert(0, new_seg)
     new_segments.insert(0, pre_segment)
     flattened_new_segments = flatten_list(new_segments)
 
