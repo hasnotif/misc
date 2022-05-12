@@ -59,8 +59,8 @@ def main():
 
     # Prepare .loc lines
     loc_lines = []
-    marker_type = "AUTOSOME" # hardcoded for now - does a vcf file specify marker type? (i.e. autosome/x-linked)
-    position = "0.00" # hardcoded for now - how to convert physical to genetic distance?
+    marker_type = "AUTOSOME" # hardcoded as autosome since we are only dealing with autosomes
+    position = "50.00" # hardcoded to be completely unlinked since we are assuming that the markers are as such
     for line in vcf_lines:
         fields = line.split("\t")
         # -header line-
